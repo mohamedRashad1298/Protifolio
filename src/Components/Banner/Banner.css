@@ -1,0 +1,75 @@
+.banner{
+ margin-top: 10px;
+ background-image: url('../../assets/img/banner-bg.png');
+ height: 90vh;
+ width: 100%;
+}
+
+.banner__row{
+ transform: translateY(30%);
+ display: flex;
+ justify-content: space-evenly;
+ align-items: center;
+}
+
+.banner__col1{
+ flex:0.7;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+.banner__col1 > span {
+ font-size: 30px;
+ color: #fff;
+}
+
+.banner__col1 h1 {
+ color: white;
+ font-size: 35px;
+ margin-top: 15px;
+}
+
+.banner__col1 p {
+ color: white;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ font-size: 24px;
+}
+
+.banner__col1 button {
+ display: flex;
+ align-items: center;
+ gap: 5px;
+ padding: 5px 8px;
+ font-size: 16px ;
+ background-color: rgb(51, 49, 143);
+ cursor: pointer;
+ color: white;
+ border: none;
+}
+
+.banner__image--animated{
+ height: 350px;
+ transform: translateY(0);
+ animation-name: updown;
+ animation-duration: 4s;
+ animation-iteration-count: infinite;
+ animation-direction: alternate-reverse;
+}
+
+@media screen and (max-width: 767px) {
+ .banner__row{
+  flex-direction: column-reverse;
+ }
+}
+
+@keyframes updown {
+ 0%{
+transform: translateY(-30px);
+ }
+ 100%{
+  transform: translateY(0);
+ }
+}
